@@ -2,11 +2,11 @@
 10, minimum 8
 
 # Roles Distribution
-Aryan, Elise - Robot – lab session
-Tim, Luka - Digital twin – simulation works
-Alexey, Elitsa, Beki - Micro services – programming (using the sensors and stuff)
-Elise, Beki - Organisation - plan the room
-Luka - Networking - interoperation system, data goes where it should be
+- Aryan, Elise - Robot – lab session
+- Tim, Luka - Digital twin – simulation works
+- Alexey, Elitsa, Beki - Micro services – programming (using the sensors and stuff)
+- Elise, Beki - Organisation - plan the room
+- Luka - Networking - interoperation system, data goes where it should be
 
 # Planning 
 Tuesday 10.30 - 13.30

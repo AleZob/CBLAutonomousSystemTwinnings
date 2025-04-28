@@ -9,7 +9,8 @@ apt-get install -y \
     x11-apps \
     mesa-utils \
     python3-argcomplete \
-    chromium-browser
+    # chromium-browser
+
 rm -rf /var/lib/apt/lists/*
 
 locale-gen en_US.UTF-8

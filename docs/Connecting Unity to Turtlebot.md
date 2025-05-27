@@ -33,3 +33,10 @@ Open a new terminal in the source directory of workspace
 4. ros2 launch unity_slam_example unity_slam_example.py
 
 Next proceed by using teleop keyboard to move the robot. 
+
+# Importing unity scene
+1. Go to the Scene folder of your unity directory
+2. Right click on the map called Scene and click on "open containing folder"
+3. Add your unity scene here
+4. Go back to Unity and your scene should be listed in the Scene directory
+5. Drag your scene to the Hierarchy (Note that multiple scenes in the hierachy can cause a lower FPS)

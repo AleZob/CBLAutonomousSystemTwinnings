@@ -24,3 +24,12 @@ same time!
 Open a new terminal
 1. export TURTLEBOT3_MODEL=burger
 2. ros2 run turtlebot3_teleop teleop_keyboard
+
+# Using RViz to Visualize Surroundings in Digital Environment
+Open a new terminal in the source directory of workspace
+1. source /opt/ros/foxy/setup.bash
+2. source install/local_setup.bash
+3. export TURTLEBOT3_MODEL=waffle
+4. ros2 launch unity_slam_example unity_slam_example.py
+
+Next proceed by using teleop keyboard to move the robot. 

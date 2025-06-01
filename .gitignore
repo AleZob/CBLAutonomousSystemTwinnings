@@ -1,5 +1,7 @@
 */.vscode/
-My project/Library/
-My project/Logs/
-My project/obj/
-My project/Temp/
+.vscode/
+unity/Library/
+unity/Logs/
+unity/obj/
+unity/Temp/
+vm/

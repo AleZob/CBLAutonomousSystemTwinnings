@@ -11,10 +11,8 @@ public class MovementGoal : MonoBehaviour
     private ROSConnection ros;
     // private string topicName = "nav2_msgs/action/NavigateToPose";
     [SerializeField] private string topicName = "/goal_pose";
-    public GameObject destination;
 
-    [SerializeField] private float messageDelay = 0.5f;
-    [SerializeField] private float timeSinceMessage = 0.0f;
+    [SerializeField] private GameObject baseFootprint;
 
     void Start()
     {
@@ -22,33 +20,28 @@ public class MovementGoal : MonoBehaviour
         ros.RegisterPublisher<PoseStampedMsg>(topicName);
     }
 
-    private void Update()
+    public void NavigateToObject(GameObject destination)
     {
-        timeSinceMessage += Time.deltaTime;
-        if (timeSinceMessage >= messageDelay)
-        {
-            // They use a different coordinate system
-            PointMsg position = new PointMsg(
+        // They use a different coordinate system
+        PointMsg position = new PointMsg(
                 destination.transform.position.z,
                 -destination.transform.position.x,
                 destination.transform.position.y
             );
-            QuaternionMsg orientation = new QuaternionMsg(
-                destination.transform.rotation.x,
-                destination.transform.rotation.y,
-                destination.transform.rotation.z,
-                destination.transform.rotation.w
-            );
-            PoseMsg pose = new PoseMsg(position, orientation);
+        QuaternionMsg orientation = new QuaternionMsg(
+            destination.transform.rotation.x,
+            destination.transform.rotation.y,
+            destination.transform.rotation.z,
+            destination.transform.rotation.w
+        );
+        PoseMsg pose = new PoseMsg(position, orientation);
 
-            HeaderMsg header = new HeaderMsg();
-            PoseStampedMsg msg = new PoseStampedMsg(header, pose);
-            ros.Publish(topicName, msg);
-            // byte[] bytes = msg.Serialize();
-            // string str = System.Text.Encoding.ASCII.GetString(bytes);
-            // print($"Sending message to topic {topicName} with payload {str}.");
-            timeSinceMessage = 0.0f;
-        }
+        HeaderMsg header = new HeaderMsg();
+        PoseStampedMsg msg = new PoseStampedMsg(header, pose);
+        ros.Publish(topicName, msg);
 
     }
+
+    public float DistanceToObject(GameObject destination) =>
+        Vector3.Distance(destination.transform.position, baseFootprint.transform.position);
 }

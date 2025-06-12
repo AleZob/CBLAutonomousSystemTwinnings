@@ -49,3 +49,11 @@ Next proceed by using teleop keyboard to move the robot.
 3. Add your unity scene here
 4. Go back to Unity and your scene should be listed in the Scene directory
 5. Drag your scene to the Hierarchy (Note that multiple scenes in the hierachy can cause a lower FPS)
+
+
+# Changing the size of the robot in RViz
+Edit the robot radius component in 
+/opt/ros/foxy/share/nav2_bringup/params/nav2_params.yaml
+Use sudo as it is root acces directory. 
+Value of 0.11 seems about right on the size of the robot.
+Note: it seems for correct functions BOTH locval AND global components should be edited!!!

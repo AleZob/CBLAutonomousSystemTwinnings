@@ -149,8 +149,8 @@ namespace RosSharp.Control
                 rosLinear = 0f;
                 rosAngular = 0f;
             }
-             Debug.Log("linear: " + rosLinear);
-            Debug.Log("angular: " + rosAngular);
+            // Debug.Log("linear: " + rosLinear);
+            // Debug.Log("angular: " + rosAngular);
             RobotInput(rosLinear, -rosAngular);
         }
 

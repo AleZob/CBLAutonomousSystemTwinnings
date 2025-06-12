@@ -48,7 +48,6 @@ public class Navigator : MonoBehaviour
         }
         movementGoal = GetComponent<MovementGoal>();
         lastIndex = stops.Count - 1;
-        navigateToTarget();
     }
 
     private void Update()

@@ -1,0 +1,15 @@
+# New change for gazebo
+
+# source /usr/share/gazebo/setup.sh
+
+source /opt/ros/foxy/setup.bash
+
+source ~/example_ws/install/local_setup.bash
+
+export TURTLEBOT3_MODEL=burger
+
+alias docs="nvim ~/CBLAutonomousSystemTwinnings/docs/Connecting\ Unity\ to\ Turtlebot.md"
+
+alias key="ros2 run turtlebot3_teleop teleop_keyboard"
+
+alias rviz="ros2 launch unity_slam_example unity_slam_example.py"

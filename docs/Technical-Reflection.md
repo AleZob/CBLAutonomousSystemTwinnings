@@ -1,10 +1,11 @@
-# Technical Reflection ABALEET
+# Technical Reflection
 
-## Goals
+> Critical analysis of what was implemented, what was not, challenges faced, and future work.
 
-## Resources
+## Features implemented
 
-## Timeline
+## Features unimplemented
 
-## Risk Assessment Evaluation
+## Challanges faced
 
+## What we'd do given more time

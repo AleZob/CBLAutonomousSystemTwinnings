@@ -1,2 +1,10 @@
-Technical Reflection ABALEET
-----------------------------
+# Technical Reflection ABALEET
+
+## Goals
+
+## Resources
+
+## Timeline
+
+## Risk Assessment Evaluation
+

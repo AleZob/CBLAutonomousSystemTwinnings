@@ -41,6 +41,29 @@ there. This is not part of our requirements (yet), but it would make the system
 much more useful to stakeholders, so we could consider it for future
 improvement.
 
+## Challenges with TurtleBot
+
+As mentioned above we encountered the issue of syncing the Physical TurtleBot to 
+the digital one.
+The issue showed itself as only one "frame" of data in the RViz and Unity. 
+We did not have time to fix it as replicating the issue was inconsistent due to the 
+lack of understanding of what went wrong. 
+On the last (filming) lab session it was Identified that it was probably issue with
+clock desync. Unfortunately nobody knew how to solve it. So we did not end up utilizing
+the digital robot. 
+
+## Challenges with Development Environment
+
+At first we wanted to use docker as we had people familiar with how slow VM was and how 
+much space it takes on the storage. Unfortunately the docker installation encountered errors 
+that were not solved. Asking tutors for help did not clarify the issue. So in week 3
+we made a decision to switch to VM instead. This lead to significant loss of pace felt thought 
+the course as we had 4 more lab sessions to implement physical part of our PoC. 
+
+VM itself proved incredibly unstable and slow. With half of the team getting different results
+for seemingly the same tests. In the end it was solved and we were able to use git. But any work on it proved
+incredibly slow, with both Unity and RViz running at 1.5 fps.
+
 ## Login details for lab laptops
 
 Username: ubuntuhost

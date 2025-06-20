@@ -51,7 +51,7 @@ Next proceed by using teleop keyboard to move the robot.
 5. Drag your scene to the Hierarchy (Note that multiple scenes in the hierachy can cause a lower FPS)
 
 
-# Changing the size of the robot in RViz
+## Changing the size of the robot in RViz
 Edit the robot radius component in 
 /opt/ros/foxy/share/nav2_bringup/params/nav2_params.yaml
 Use sudo as it is root acces directory. 

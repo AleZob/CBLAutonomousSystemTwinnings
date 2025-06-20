@@ -84,8 +84,7 @@ We suspect that friction on one of the wheels is lower that on the other, which 
 turning radius on both wheels. In addition we could did not have time to dig through the documentation 
 to find where to make it "more confident" in its path finding. So all above problems seemed to dramatically increase
 when we sized up the Unity scene appropriately. Including changing the robots
-footprint in the folder. Explained in [[./Connecting Unity to Turtlebot.md]] in
-"Changing size of the robot". 
+footprint in the folder. Explained [Here](/docs/Connecting%20Unity%20to%20Turtlebot.md#changing-the-size-of-the-robot-in-rviz). 
 
 ## Login details for lab laptops
 

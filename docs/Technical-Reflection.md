@@ -1,5 +1,16 @@
 # Technical Reflection
 
+<!--toc:start-->
+- [Technical Reflection](#technical-reflection)
+  - [Bidirectional Communication](#bidirectional-communication)
+  - [State Synchronization](#state-synchronization)
+  - [Environmental & Object Interaction](#environmental-object-interaction)
+  - [Challenges with TurtleBot](#challenges-with-turtlebot)
+  - [Challenges with Development Environment](#challenges-with-development-environment)
+  - [Challenges with RViz navigator](#challenges-with-rviz-navigator)
+  - [Login details for lab laptops](#login-details-for-lab-laptops)
+<!--toc:end-->
+
 > Critical analysis of what was implemented, what was not,
 > challenges faced, and future work.
 
@@ -63,6 +74,18 @@ the course as we had 4 more lab sessions to implement physical part of our PoC.
 VM itself proved incredibly unstable and slow. With half of the team getting different results
 for seemingly the same tests. In the end it was solved and we were able to use git. But any work on it proved
 incredibly slow, with both Unity and RViz running at 1.5 fps.
+
+
+## Challenges with RViz navigator
+
+Navigator itself seems to sometimes do paths thought walls and/or too much turns.
+It seems that robot overcompensates constantly which leads to it moving in circles.
+We suspect that friction on one of the wheels is lower that on the other, which leads to different 
+turning radius on both wheels. In addition we could did not have time to dig through the documentation 
+to find where to make it "more confident" in its path finding. So all above problems seemed to dramatically increase
+when we sized up the Unity scene appropriately. Including changing the robots
+footprint in the folder. Explained in [[./Connecting Unity to Turtlebot.md]] in
+"Changing size of the robot". 
 
 ## Login details for lab laptops
 

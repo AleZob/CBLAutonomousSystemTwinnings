@@ -4,7 +4,7 @@
 - [Technical Reflection](#technical-reflection)
   - [Bidirectional Communication](#bidirectional-communication)
   - [State Synchronization](#state-synchronization)
-  - [Environmental & Object Interaction](#environmental-object-interaction)
+  - [Environmental \& Object Interaction](#environmental--object-interaction)
   - [Challenges with TurtleBot](#challenges-with-turtlebot)
   - [Challenges with Development Environment](#challenges-with-development-environment)
   - [Challenges with RViz navigator](#challenges-with-rviz-navigator)
@@ -54,37 +54,42 @@ improvement.
 
 ## Challenges with TurtleBot
 
-As mentioned above we encountered the issue of syncing the Physical TurtleBot to 
-the digital one.
-The issue showed itself as only one "frame" of data in the RViz and Unity. 
-We did not have time to fix it as replicating the issue was inconsistent due to the 
-lack of understanding of what went wrong. 
-On the last (filming) lab session it was Identified that it was probably issue with
-clock desync. Unfortunately nobody knew how to solve it. So we did not end up utilizing
-the digital robot. 
+As mentioned above, we encountered an issue when syncing the Physical TurtleBot
+to the digital one. The issue showed itself as only one "frame" of data in RViz
+and Unity. We did not have time to fix it, as replicating the issue was
+inconsistent and a lack of understanding of what went wrong. During the last
+(filming) lab session it was identified that it was probably issue with clock
+desync. Unfortunately nobody knew how to solve it, so we did not end up
+utilizing the digital robot.
 
 ## Challenges with Development Environment
 
-At first we wanted to use docker as we had people familiar with how slow VM was and how 
-much space it takes on the storage. Unfortunately the docker installation encountered errors 
-that were not solved. Asking tutors for help did not clarify the issue. So in week 3
-we made a decision to switch to VM instead. This lead to significant loss of pace felt thought 
-the course as we had 4 more lab sessions to implement physical part of our PoC. 
+At first, we wanted to use Docker as we had people familiar with how slow VM was
+and how much storage space it takes. Unfortunately, the Docker installation came
+with errors that went unsolved for such a long time that it was irresponsible to
+keep trying to use Docker over the VM. Asking tutors for help did not help. So,
+in week 3, we made a decision to switch to VM instead. This lead to significant
+loss of pace was felt through the course as we had 4 more lab sessions to
+implement our PoC.
 
-VM itself proved incredibly unstable and slow. With half of the team getting different results
-for seemingly the same tests. In the end it was solved and we were able to use git. But any work on it proved
-incredibly slow, with both Unity and RViz running at 1.5 fps.
-
+The VM itself proved incredibly unstable and slow, with half of the team getting
+different results for seemingly the same tests. Over the course of weeks, nearly
+all of our members ended up with a functional virtual machine, but any work with
+it proved incredibly slow, with both Unity and RViz averaging 1.5 fps with both
+running simultaneously.
 
 ## Challenges with RViz navigator
 
-Navigator itself seems to sometimes do paths thought walls and/or too much turns.
-It seems that robot overcompensates constantly which leads to it moving in circles.
-We suspect that friction on one of the wheels is lower that on the other, which leads to different 
-turning radius on both wheels. In addition we could did not have time to dig through the documentation 
-to find where to make it "more confident" in its path finding. So all above problems seemed to dramatically increase
-when we sized up the Unity scene appropriately. Including changing the robots
-footprint in the folder. Explained [Here](/docs/Connecting%20Unity%20to%20Turtlebot.md#changing-the-size-of-the-robot-in-rviz). 
+Navigator itself sometimes create winding paths straight through walls present
+on the costmap. We suspect that robot constantly overcompensates, which leads to
+it moving in circles. A likely cause is that friction on one of the wheels is
+lower that on the other, which leads to a different turning radius between the
+wheels. In addition, we did not have time to dig through the documentation
+to find where to make it "more confident" in its path finding. So all above
+problems seemed to dramatically increase when we sized up the Unity scene
+appropriately. We tried changing the robots
+footprint in the folder, as explained in [our documentation](/docs/Connecting%20Unity%20to%20Turtlebot.md#changing-the-size-of-the-robot-in-rviz),
+but it did not seem to help.
 
 ## Login details for lab laptops
 

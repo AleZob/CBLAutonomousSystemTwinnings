@@ -69,7 +69,7 @@ and how much storage space it takes. Unfortunately, the Docker installation came
 with errors that went unsolved for such a long time that it was irresponsible to
 keep trying to use Docker over the VM. Asking tutors for help did not help. So,
 in week 3, we made a decision to switch to VM instead. This lead to significant
-loss of pace was felt through the course as we had 4 more lab sessions to
+loss of pace that was felt through the course as we had 4 more lab sessions to
 implement our PoC.
 
 The VM itself proved incredibly unstable and slow, with half of the team getting

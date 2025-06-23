@@ -19,19 +19,19 @@
 Physical-to-digital communication was implemented by the TurtleBot sending its
 LiDAR data to its digital twin. This data was used to direct the point-to-point
 navigation of the TurtleBot. It was not used to direct which line the TurtleBot
-was sent to. This is one of the most important features we would want to add, if
-given more time.
+was sent to, as we resrted to only working with a single bus line. This is one 
+of the most important features we would want to add, if given more time.
 
 Digital-to-physical communication was implemented by using demand data to guide
-the line and stop a TurtleBot is assigned, and then publishing a goal pose along
-that line. We could have considered more variables in assigning these, but as
+the initial stop a TurtleBot is assigned, and then publishing a goal pose to that 
+stop. We could have considered more variables in assigning these, but as
 the current level is sufficient for proving the concept, we would only implement
 this if we had more than the theoretical 1 to 5 weeks.
 
-The reason why did not implement certain features in the parapgraphs above was
-that we were too busy trying to solve a more critical issue addressed in the
-next section. We faced no other challenged trying to implement them, as we did
-not try in the first place, because our attention was elsewhere.
+The reason why we did not implement certain features mentioned in the parapgraphs 
+above is that we were too busy trying to solve a more critical issue addressed in 
+the next section. We faced no additional challenges trying to implement them, as 
+we did not try in the first place since our attention was elsewhere.
 
 ## State Synchronization
 
@@ -45,51 +45,53 @@ would only have digital demonstrations.
 ## Environmental & Object Interaction
 
 We modelled environmental interaction in the digital environment by simulating
-passengers leaving the bus stop (because they boarded the bus) whenever an agent
-gets near. We could expand this by allowing for passengers to indicate at which
-they want to get off and whether they want to transfer to another line from
-there. This is not part of our requirements (yet), but it would make the system
-much more useful to stakeholders, so we could consider it for future
+passengers leaving the bus stop (because they boarded the bus) whenever the 
+TurtleBot got near. We could expand this by allowing for passengers to indicate 
+at which stop they want to get off, and whether they want to transfer to another 
+line from there. This is not part of our requirements (yet), but it would make 
+the system much more useful to stakeholders, so we could consider it for future
 improvement.
 
 ## Challenges with TurtleBot
 
-As mentioned above, we encountered an issue when syncing the Physical TurtleBot
-to the digital one. The issue showed itself as only one "frame" of data in RViz
-and Unity. We did not have time to fix it, as replicating the issue was
-inconsistent and a lack of understanding of what went wrong. During the last
-(filming) lab session it was identified that it was probably issue with clock
-desync. Unfortunately nobody knew how to solve it, so we did not end up
-utilizing the digital robot.
+As mentioned above, we encountered an issue when synching the Physical TurtleBot
+to the Digital Twin. We only received one "frame" of data in RViz and Unity. We 
+did not have time to fix it, as replicating the issue was inconsistent and we 
+thus lacked understanding of what the cause for it was. During the last
+(filming) lab session we identified that the problem was likely due to a clock
+desync. Unfortunately, nobody knew how to resolve the issue, so we ended up not
+utilizing the Physical TurtleBot.
 
 ## Challenges with Development Environment
 
-At first, we wanted to use Docker as we had people familiar with how slow VM was
-and how much storage space it takes. Unfortunately, the Docker installation came
-with errors that went unsolved for such a long time that it was irresponsible to
-keep trying to use Docker over the VM. Asking tutors for help did not help. So,
+At first, we wanted to use Docker to avoid the slow speed of VM and the large 
+amount of storage space it takes. Unfortunately, installing Docker came with
+errors that we were unable to fix for so long that that it was irresponsible to
+keep trying to use Docker over VM. Asking tutors for help did not help. So,
 in week 3, we made a decision to switch to VM instead. This lead to significant
-loss of pace that was felt through the course as we had 4 more lab sessions to
-implement our PoC.
+loss of pace that was felt through the course as we had only 4 more lab sessions 
+to implement our PoC.
 
-The VM itself proved incredibly unstable and slow, with half of the team getting
-different results for seemingly the same tests. Over the course of weeks, nearly
-all of our members ended up with a functional virtual machine, but any work with
-it proved incredibly slow, with both Unity and RViz averaging 1.5 fps with both
+The VM itself proved incredibly unstable, and we were unable to find any 
+fixes that improved performance sufficiently. Different team members were getting
+different results for seemingly the same tests, which made resolving issues
+significantly harder, as they were hard to replicate. Although we all managed 
+to install and run the virtual machine and Unity project in it, work with VM (and 
+so also progress) was slow since we averaged 1.5fps when Unity and RViz were
 running simultaneously.
 
 ## Challenges with RViz navigator
 
-Navigator itself sometimes create winding paths straight through walls present
-on the costmap. We suspect that robot constantly overcompensates, which leads to
-it moving in circles. A likely cause is that friction on one of the wheels is
-lower that on the other, which leads to a different turning radius between the
-wheels. In addition, we did not have time to dig through the documentation
-to find where to make it "more confident" in its path finding. So all above
-problems seemed to dramatically increase when we sized up the Unity scene
-appropriately. We tried changing the robots
+The navigator itself sometimes created winding paths straight through walls present
+on the costmap. We suspect that the robot constantly overcompensates, which leads to
+it moving in circles. A likely cause is that the friction of one of the wheels is
+lower that that of the other, which leads to a different turning radius between the
+wheels. However, we were unable to identify the correct friction values.In addition, 
+we did not have time to dig through the documentation to find ways to make it "more 
+confident" in its path finding. All of aforementioned problems seemed to dramatically 
+increase when we sized up the Unity scene appropriately. We tried changing the robot's
 footprint in the folder, as explained in [our documentation](/docs/Connecting%20Unity%20to%20Turtlebot.md#changing-the-size-of-the-robot-in-rviz),
-but it did not seem to help.
+but that did not seem to help.
 
 ## Login details for lab laptops
 

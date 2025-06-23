@@ -1,3 +1,7 @@
+# Documentation
+All the documentation that was saved on git is in folder ```docs```.
+Technical reflection is also there.
+
 # Expectations
 10, minimum 8
 
